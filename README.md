@@ -1,7 +1,7 @@
 # ceph-rbd
 kubernetes ceph storage class
 
-1. apply 01-CEPH-RBD-provision.yml
+1. create storage provisioner (apply 01-CEPH-RBD-provision.yml)
 
 2. create secret
 kubectl create secret generic ceph-XXXX \
@@ -21,3 +21,4 @@ kubectl create secret generic ceph-XXXX-kubernetes \
     --from-literal=key='AQASEbddzKdLDhAAoMjizD9zvZMMCrcdI18DDg==' \
     --namespace=kube-system
     
+5. create storage class (apply 02-CEPH-RBD-storageclass.yml) 
