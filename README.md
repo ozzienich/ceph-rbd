@@ -22,3 +22,13 @@ kubectl create secret generic ceph-XXXX-kubernetes \
     --namespace=kube-system
     
 5. create storage class (apply 02-CEPH-RBD-storageclass.yml) 
+
+6. test create PVC (apply 03-CEPH-RBD-tets-create-PVC.yml)
+
+# Troubleshot CEPH
+ Overall status:HEALTH_WARN
+ POOL_APP_NOT_ENABLED: application not enabled on 1 pool(s)
+
+ceph osd pool application enable kubernetes rbd
+
+
