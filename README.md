@@ -1,7 +1,7 @@
 # ceph-rbd
 kubernetes ceph storage class
 
-1. create storage provisioner (apply 01-CEPH-RBD-provision.yml)
+1. create storage provisioner
 ```groovy
 kubectl apply -f 01-CEPH-RBD-provision.yml
 ```
@@ -29,11 +29,11 @@ kubectl create secret generic ceph-XXXX-kubernetes \
     --namespace=kube-system
 ```
 
-5. create storage class (apply 02-CEPH-RBD-storageclass.yml) 
+5. create storage class
 ```groovy
 kubectl apply -f 02-CEPH-RBD-storageclass.yml
 ```
-6. test create PVC (apply 03-CEPH-RBD-tets-create-PVC.yml)
+6. test create PVC
 ```groovy
 kubectl apply -f 03-CEPH-RBD-tets-create-PVC.yml
 ```
